@@ -1,0 +1,10 @@
+{
+  "type": "icecubes:smithing_enchant",
+  "base": {
+    "tag": "minecraft:swords"
+  },
+  "addition": {
+    "item": "icecubes:frost_essence"
+  },
+  "enchantment": "icecubes:ice_aspect"
+}

@@ -1,0 +1,17 @@
+{
+  "item.icecubes.ice_cube_spawn_egg": "Ice Cube Spawn Egg",
+  "item.icecubes.frost_essence": "Frost Essence",
+  "entity.icecubes.ice_cube": "Ice Cube",
+  "enchantment.icecubes.ice_aspect": "Ice Aspect",
+  "enchantment.icecubes.everfrost": "Everfrost",
+  "effect.icecubes.chilled": "Chilled",
+
+  "item.minecraft.lingering_potion.effect.chilling": "Lingering Potion of Chilling",
+  "item.minecraft.lingering_potion.effect.long_chilling": "Lingering Potion of Chilling",
+  "item.minecraft.potion.effect.chilling": "Potion of Chilling",
+  "item.minecraft.potion.effect.long_chilling": "Potion of Chilling",
+  "item.minecraft.splash_potion.effect.chilling": "Splash Potion of Chilling",
+  "item.minecraft.splash_potion.effect.long_chilling": "Splash Potion of Chilling",
+  "item.minecraft.tipped_arrow.effect.chilling": "Arrow of Chilling",
+  "item.minecraft.tipped_arrow.effect.long_chilling": "Arrow of Chilling"
+}
