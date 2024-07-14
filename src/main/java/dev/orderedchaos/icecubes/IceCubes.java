@@ -26,6 +26,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.BasicItemListing;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -78,16 +79,7 @@ public class IceCubes {
     if (IceCubesConfig.enableVillagerTrades.get()) {
       final int JOURNEYMAN = 3;
       if (event.getType() == VillagerProfession.CLERIC) {
-//      event.getTrades().get(JOURNEYMAN).add(new BasicItemListing(new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1), new ItemStack(Items.EMERALD, 2), 7, 15, 1));
-        event.getTrades().get(JOURNEYMAN).add(new VillagerTrades.ItemListing() {
-          @Nullable
-          @Override
-          public MerchantOffer getOffer(Entity pTrader, RandomSource pRandom) {
-            ItemStack stack = new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1);
-            ItemCost cost = new ItemCost(stack.getItemHolder(), stack.getCount(), DataComponentPredicate.EMPTY, stack);
-            return new MerchantOffer(cost, Optional.empty(), new ItemStack(Items.EMERALD, 2), 6, 15, 1);
-          }
-        });
+        event.getTrades().get(JOURNEYMAN).add(new BasicItemListing(new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1), new ItemStack(Items.EMERALD, 2), 6, 15, 1));
       }
     }
   }
@@ -95,16 +87,7 @@ public class IceCubes {
   @SubscribeEvent
   private void addWandererTrades(WandererTradesEvent event) {
     if (IceCubesConfig.enableWanderingTrades.get()) {
-      //    event.getGenericTrades().add(1, new BasicItemListing(7, new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1), 2, 3));
-      event.getGenericTrades().add(new VillagerTrades.ItemListing() {
-        @Nullable
-        @Override
-        public MerchantOffer getOffer(Entity pTrader, RandomSource pRandom) {
-          ItemStack stack = new ItemStack(Items.EMERALD, 7);
-          ItemCost cost = new ItemCost(stack.getItemHolder(), stack.getCount(), DataComponentPredicate.EMPTY, stack);
-          return new MerchantOffer(cost, Optional.empty(), new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1), 2, 3, 1);
-        }
-      });
+      event.getGenericTrades().add(1, new BasicItemListing(7, new ItemStack(ItemRegistry.FROST_ESSENCE.get(), 1), 2, 3));
     }
   }
 
